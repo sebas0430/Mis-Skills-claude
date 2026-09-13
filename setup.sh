@@ -2,10 +2,15 @@
 # Reinstala en un PC nuevo todas las skills, plugins y MCP servers de este repo.
 set -e
 
-echo "== Skills locales (humanizer, napkin) =="
+echo "== Skills locales (humanizer, napkin, decision-critic) =="
 mkdir -p ~/.claude/skills
 cp -r "$(dirname "$0")/humanizer" ~/.claude/skills/humanizer
 cp -r "$(dirname "$0")/napkin" ~/.claude/skills/napkin
+cp -r "$(dirname "$0")/decision-critic" ~/.claude/skills/decision-critic
+
+echo "== Agentes locales (decision-critic) =="
+mkdir -p ~/.claude/agents
+cp "$(dirname "$0")/agents/decision-critic.md" ~/.claude/agents/decision-critic.md
 
 echo "== Marketplace oficial de Anthropic =="
 claude plugin marketplace add anthropics/claude-plugins-official || true

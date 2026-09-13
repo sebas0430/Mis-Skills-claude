@@ -6,6 +6,8 @@ Backup de mi configuración de skills, plugins y servidores MCP de Claude Code, 
 
 - `humanizer/` — skill que reescribe texto para que no suene generado por IA ([blader/humanizer](https://github.com/blader/humanizer))
 - `napkin/` — skill de memoria persistente por repo, un runbook curado de correcciones/preferencias ([blader/napkin](https://github.com/blader/napkin))
+- `decision-critic/` — skill disparador: invoca con `/decision-critic` para lanzar el agente `decision-critic` en un contexto aislado, sin la memoria de la conversación actual
+- `agents/decision-critic.md` — el agente en sí: revisor escéptico que evalúa decisiones/documentos buscando fallas en vez de validarlos
 - `setup.sh` — instala lo anterior más los plugins oficiales de Anthropic (`claude-code-setup`, `project-artifact`, `mcp-server-dev`, `feature-dev`, `code-review`, `github`) y los servidores MCP de DevOps (`kubernetes-mcp-server`, `mcp-server-docker`)
 
 ## Instalación en un PC nuevo
